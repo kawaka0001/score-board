@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "ritwickdey.LiveServer",
+    "tailwindcss.tailwindcss-intellisense",
+    "oderwat.indent-rainbow",
+    "formulahendry.auto-rename-tag",
+    "bradgashler.htmltagwrap",
+    "mohd-akram.vscode-html-format"
+  ]
+}

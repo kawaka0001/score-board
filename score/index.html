@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>卓球の点数カウンタ-スコア画面</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    .anton-regular {
+      font-family: "Anton", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body class="w-full h-screen bg-black/93  anton-regular text-white flex flex-col justify-center items-center">
+  <a href="../index.html" class="text-lg fixed top-6 right-6 text-white/60">
+    Restart
+  </a>
+  <div class=" m-8 text-3xl">
+    Score Board
+  </div>
+  <div class="w-full flex justify-center gap-x-4">
+    <div class="w-96">
+      <button onclick="addScorePlayer1Print()"
+        class="flex flex-col w-full bg-white/0 border-2 border-solid border-gray-600 rounded-2xl px-5 py-5 cursor-pointer">
+        <div class="mx-auto text-center text-xl font-bold m-2 tracking-[0.1em]">Player1</div>
+        <div id="Player1" class="flex justify-center font-bold  text-9xl m-4">
+          0
+        </div>
+      </button>
+      <button onclick="subScorePlayer1Print()" class="bg-gray-800 h-12 w-full rounded-xl cursor-pointer text-3xl">
+        -
+      </button>
+    </div>
+    <div class="w-96">
+      <button onclick="addScorePlayer2Print()"
+        class="flex flex-col w-full bg-white/0 border-2 border-solid border-gray-600 rounded-2xl  px-5 py-5 cursor-pointer">
+        <div class="mx-auto text-center text-xl font-bold m-2 tracking-[0.1em]">Player2</div>
+        <div id="Player2" class="flex justify-center font-bold  text-9xl m-4">
+          0
+        </div>
+
+      </button>
+      <button onclick="subScorePlayer2Print()"
+        class="left-5 bg-gray-800 h-12 w-full rounded-xl cursor-pointer text-3xl">
+        -
+      </button>
+    </div>
+  </div>
+  <button onclick="scoreResetPrint()" type="button"
+    class="px-6 py-3.5 text-2xl font-medium text-white flex space-x-1 items-center rounded-lg text-center my-8 cursor-pointer">
+    <img src="../icon_reset.svg" alt="点数をリセットします" width="32">
+    <div>Reset</div>
+  </button>
+</body>
+<script src="./index.js"></script>
+
+</html>
